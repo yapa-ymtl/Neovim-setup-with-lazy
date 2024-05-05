@@ -13,12 +13,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup(
     {
-        {import = "yapa.plugins"}
-    },
-    {
-        install = {
-            -- colorscheme = {"nightfly"},
-           colorscheme = {"catppuccin"},
-        },
+        {import = "yapa.plugins"},
+        {import = "yapa.plugins.lsp"}
     }
+    -- {
+    --     install = {
+    --         -- colorscheme = {"nightfly"},
+    --        colorscheme = {"catppuccin"},
+    --     },
+    -- }
 )

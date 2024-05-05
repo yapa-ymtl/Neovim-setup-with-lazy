@@ -86,28 +86,11 @@ return {
       on_attach = on_attach,
     })
 
-    -- -- configure clangd server
-    -- lspconfig["badedpyright"].setup({
-    --   capabilities = capabilities,
-    --   on_attach = on_attach,
-    --     filetypes = {"python"},
-    --     settings{
-    --         {
-    --           basedpyright = {
-    --             analysis = {
-    --               autoSearchPaths = true,
-    --               diagnosticMode = "openFilesOnly",
-    --               useLibraryCodeForTypes = true
-    --             },
-    --           },
-    --         },
-    --     },
-    --   -- root_dir = root_pattern(".git"),
-    --   -- on_attach = function(client, bufnr)
-    --   --     client.server_capabilities.signatureHelpProvider = false
-    --   --     on_attach(client, bufnr)
-    --   -- end,
-    -- })
+    -- configure clangd server
+    lspconfig["basedpyright"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
 
     -- -- lspconfig.clangd.setup {
     -- lspconfig["clangd"].setup({

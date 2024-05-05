@@ -1,4 +1,5 @@
 local opt = vim.opt -- for conciseness
+vim.g.NVIM_TUI_ENABLE_CURSOR_SHAPE = 1
 
 -- line numbers
 opt.relativenumber = true -- show relative line numbers
@@ -11,7 +12,7 @@ opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 
 -- line wrapping
-opt.wrap = false -- disable line wrapping
+opt.wrap = true -- disable line wrapping
 
 -- search settings
 opt.ignorecase = true -- ignore case when searching
@@ -31,11 +32,9 @@ opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 -- backspace
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
--- clipboard
---opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+-- -- clipboard this cause an issue in tmux with neovim
+-- opt.clipboard:append("unnamedplus") -- use system clipboard as default register
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
-
--- opt.iskeyword:append("-") -- consider string-string as whole word

@@ -3,6 +3,8 @@ vim.g.mapleader = " "
 
 local keymap = vim.keymap -- for conciseness
 
+vim.api.nvim_set_keymap('n', '<Leader>hh', [[:let @/ = '\<<C-R><C-W>\>'<CR>:set hls<CR>]], { noremap = true, silent = true })
+
 ---------------------
 -- General Keymaps
 ---------------------
@@ -42,6 +44,9 @@ keymap.set("n", "<leader>r", ":view<CR>") -- toggle split window maximization
 ----------------------
 -- Plugin Keybinds
 ----------------------
+
+-- highlights word under cursor
+-- keymap.set("n", "<leader>hl", ":MaximizerToggle<CR>", [[:let @/ = '\<<C-R><C-W>\>'<CR>:set hls<CR>]]) -- toggle split window maximization
 
 -- vim-maximizer
 keymap.set("n", "<leader>sm", ":MaximizerToggle<CR>") -- toggle split window maximization
